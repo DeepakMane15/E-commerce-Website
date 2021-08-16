@@ -1,0 +1,169 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.logo { 
+  height: 48px;
+  padding: 1px 40px;
+  margin: 0px;
+}
+.nav {
+  align-items: center;
+   margin: 2px auto; 
+   font-family: 'Baloo Tammudu 2', cursive;
+  padding-left: 400px; 
+  position: fixed;
+}
+ .navbar-style {
+  /* color: orange; */
+  box-shadow: 0 5px;
+  /* width:100%;
+  opacity: 100%; */
+} 
+.form-group {
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+  .form-con{
+    text-align: left;
+    font-family: 'Baloo Tammudu 2', cursive;
+    width: 900px;
+    padding: 70px 120px;
+    /* padding: 90px;
+    padding-bottom: 50px; */
+  
+    
+  }
+.form-gr{
+padding: 150px;
+}
+
+  .login img{
+    height: 10%;
+  } 
+  
+  
+  
+  .mr-auto{
+  font-size: large;
+  }
+
+  /* .Navbar {
+    box-shadow: 0 5px;
+  width:100%;
+  opacity: 100%;
+
+  } */
+  
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    margin-top: 40px;
+    top: 20px;
+    left: -100%;
+    background-color: #0f121dea;
+    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    transition: all 0s;
+    padding-top: 60px;
+  }
+  
+  
+  .sidebar ul {
+    /* padding: 8px 8px 8px 32px; */
+    padding: 0px;
+    /* text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; */
+  }
+  .sidebar ul li {
+    list-style-type: none;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px;
+    border-radius: 6px;
+  }
+  
+  .sidebar ul li a:hover,
+  .sidebar ul li a.active{
+    color: #566d96;
+  }
+  
+  .sidebar.active {
+    left:0;
+  }
+  
+
+
+.main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.sidebar-button {
+  margin-top: 3px;
+  font-size: 30px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  margin:" 80px auto";
+  z-index: 1;
+  padding: px
+
+}
+.sidebar-button:hover{
+  color:white; 
+}
+.sidebar-button:active
+ {
+  color:white;
+  background-color: transparent;
+  text-decoration: none;
+}
