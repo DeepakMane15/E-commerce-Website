@@ -43,7 +43,6 @@ function Home() {
                                         <a href="#">Categories</a>
                                         <a href="#">Offers</a>
                                         <a href="#">Cart</a>
-                                        <a href="#">Orders</a>
                                     </li>
                                 </ul>
 
