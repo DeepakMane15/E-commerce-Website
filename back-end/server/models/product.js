@@ -39,7 +39,7 @@ const productSchema = new mongoose.Schema({
     ],
     reviews: [
         {
-            userId: { type: mongoose.Schema.Types.ObjectId, ref: 'mytable'},
+            userId: { type: mongoose.Schema.Types.ObjectId, ref: 'user'},
             review: String
         }
     ],
@@ -47,7 +47,7 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true
     },
     createdBy: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'mytable', required: true
+        type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true
     },
     updatedAt: Date,
 

@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken')
 
 exports.signup = (request,response) => { 
     const signedupUser = new signupTemplateCopy({
-    Name: request.body.Name,
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
     Email: request.body.Email,
     Password: request.body.Password,
     Role: "user"
@@ -24,7 +25,7 @@ exports.signup = (request,response) => {
                 });
             }
             if (data) {
-                return response.status(201).json({
+                return response.status(200).json({
                    message: "signed up successfully"
                 })
             }

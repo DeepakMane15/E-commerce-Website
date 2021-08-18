@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken')
 
 exports.signup = (request,response) => { 
     const signedupUser = new signupTemplateCopy({
-    Name: request.body.Name,
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
     Email: request.body.Email,
     Password: request.body.Password,
     Role: "admin"
@@ -20,11 +21,11 @@ exports.signup = (request,response) => {
         signedupUser.save((error, data) => {
             if (error) {
                 return response.status(400).json({
-                    message: "something went wrong"
+                    message: error
                 });
             }
             if (data) {
-                return response.status(201).json({
+                return response.status(200).json({
                    message: "signed up successfully"
                 })
             }
@@ -42,11 +43,12 @@ exports.signup = (request,response) => {
             if (user) {
                 if (user.authenticate(request.body.Password)) {
                     const token = jwt.sign({ _id: user._id, Role: user.Role}, process.env.JWT_SECRET, { expiresIn: '1h' });
-                    
+                    response.cookie('token', token, { expiresIn: '1h'});
 
                     response.status(200).json({
                         // message: "Admin: Logged in successfully"
-                        token
+                        token,
+                        user
                     });
                 } else {
                     
@@ -63,4 +65,7 @@ exports.signup = (request,response) => {
         });
     }
 
-    
+exports.signout =(req,res) => {
+    res.clearCookie('token');
+    res.status(200).json({message: "signed out successfully"});
+}

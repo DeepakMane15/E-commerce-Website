@@ -2,7 +2,12 @@ const mongoose = require('mongoose')
 const bcrypt=require('bcrypt')
 
 const signupTemplate = new mongoose.Schema({
-    Name: {
+    firstName: {
+        type:String,
+        required:true
+
+    },
+    lastName: {
         type:String,
         required:true
 
@@ -14,8 +19,7 @@ const signupTemplate = new mongoose.Schema({
     },
     Password : {
         type: String,
-        required:true,
-        unique:true
+        required:true
     },
     Role : {
 
@@ -39,4 +43,4 @@ signupTemplate.methods = {
     }
 }
 
-module.exports=mongoose.model('mytable',signupTemplate)
+module.exports=mongoose.model('user',signupTemplate)
